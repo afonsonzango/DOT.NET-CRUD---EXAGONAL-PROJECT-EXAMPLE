@@ -8,4 +8,6 @@ public class PaginationUserRequestDTO
 
     [Range(1, 100, ErrorMessage = "O tamanho deve ser entre 1 e 100")]
     public int Size { get; set; } = 10;
+
+    public Guid? CompanyUuid { get; set; } = null;
 }

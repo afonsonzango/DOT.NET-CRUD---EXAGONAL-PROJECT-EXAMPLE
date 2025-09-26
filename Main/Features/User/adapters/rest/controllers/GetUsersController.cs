@@ -15,8 +15,8 @@ public class GetUsersController : ControllerBase
     }
 
     [HttpGet("all")]
-    public ActionResult<PaginatedUsersResponseDTO> GetUsers([FromQuery] PaginationUserRequestDTO paginationUserRequestDTO)
+    public ActionResult<PaginatedUsersResponseDTO> GetUsers([FromQuery] PaginationUserRequestDTO paginationUserRequestDto)
     {
-        return _userServices.GetAllUsers(paginationUserRequestDTO.Page, paginationUserRequestDTO.Size);
+        return _userServices.GetAllUsers(paginationUserRequestDto.Page, paginationUserRequestDto.Size, paginationUserRequestDto.CompanyUuid);
     }
 }

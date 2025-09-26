@@ -23,9 +23,16 @@ public class UserRepository : IUserRepositoryOutPort
             .ToList();
     }
     
-    public List<UserModel> FindAll(int page, int size)
+    public List<UserModel> FindAll(int page, int size, Guid? companyUuid = null)
     {
-        return _context.Users
+        var query = _context.Users.AsQueryable();
+
+        if (companyUuid.HasValue)
+        {
+            query = query.Where(u => u.Companies.Any(c => c.Uuid == companyUuid.Value));
+        }
+
+        return query
             .Skip(page * size)
             .Take(size)
             .ToList()
@@ -79,6 +86,7 @@ public class UserRepository : IUserRepositoryOutPort
     public void DeleteById(long id)
     {
         var entity = _context.Users.Find(id);
+        
         if (entity != null)
         {
             _context.Users.Remove(entity);

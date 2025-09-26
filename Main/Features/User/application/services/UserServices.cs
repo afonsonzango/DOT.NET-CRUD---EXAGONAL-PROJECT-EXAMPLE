@@ -18,12 +18,12 @@ public class UserServices : IUserServiceInPort
         _userRepository = userRepository;
     }
 
-    public PaginatedUsersResponseDTO GetAllUsers(int page, int size)
+    public PaginatedUsersResponseDTO GetAllUsers(int page, int size, Guid? CompanyUuid)
     {
         var paginatedUsersResponseDto = new PaginatedUsersResponseDTO();
 
         var userList = _userRepository.FindAll();
-        var users = _userRepository.FindAll(page, size)
+        var users = _userRepository.FindAll(page, size, CompanyUuid)
             .Select(_userMapper.ToResponseDto)
             .ToList();
 

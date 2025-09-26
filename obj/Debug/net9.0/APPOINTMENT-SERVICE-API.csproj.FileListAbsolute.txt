@@ -133,3 +133,4 @@
 /home/richard/RiderProjects/APPOINTMENT-SERVICE-API/APPOINTMENT-SERVICE-API/obj/Debug/net9.0/ref/APPOINTMENT-SERVICE-API.dll
 /home/richard/RiderProjects/APPOINTMENT-SERVICE-API/APPOINTMENT-SERVICE-API/bin/Debug/net9.0/AutoMapper.dll
 /home/richard/RiderProjects/APPOINTMENT-SERVICE-API/APPOINTMENT-SERVICE-API/bin/Debug/net9.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+/home/richard/RiderProjects/APPOINTMENT-SERVICE-API/APPOINTMENT-SERVICE-API/obj/Debug/net9.0/APPOINTMENT-SERVICE-API.sourcelink.json

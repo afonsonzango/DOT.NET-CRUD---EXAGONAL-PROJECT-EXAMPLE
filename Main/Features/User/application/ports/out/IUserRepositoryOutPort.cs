@@ -4,7 +4,7 @@ public interface IUserRepositoryOutPort
 {
     List<UserModel> FindAll();
 
-    List<UserModel> FindAll(int page, int size);
+    List<UserModel> FindAll(int page, int size, Guid? CompanyUuid);
 
     UserModel? FindById(long id);
 

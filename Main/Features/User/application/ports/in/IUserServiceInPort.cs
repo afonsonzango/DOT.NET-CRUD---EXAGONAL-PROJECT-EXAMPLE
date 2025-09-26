@@ -2,7 +2,7 @@ using APPOINTMENT_SERVICE_API.Main.Features.User.application.dtos;
 
 public interface IUserServiceInPort
 {
-    PaginatedUsersResponseDTO GetAllUsers(int page, int size);
+    PaginatedUsersResponseDTO GetAllUsers(int page, int size, Guid? CompanyUuid);
 
     UserResponseDTO GetUserById(string id);
 
